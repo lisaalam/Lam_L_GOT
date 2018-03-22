@@ -1,37 +1,27 @@
 (() => {
   console.log('video stuff loaded!');
-  //variables come first!
-  //grab the video
-  const vidPlayer = document.querySelector('video')
-    pauseButton = document.querySelectorAll('button')[0],
-    playButton = document.querySelectorAll('button')[1],
-    rewindButton = document.querySelectorAll('button')[2];
 
-//functions go in the middle
-function volOn() {
-  vidPlayer.muted = false;
-}
-function volOff() {
-  vidPlayer.muted = true;
-}
-function playVideo() {
-  //make the video play!
-  vidPlayer.play();
-}
-function pauseVideo() {
-  //make the video pause!
-  vidPlayer.pause();
-}
-function rewindVideo() {
-  //make the video pause!
-  vidPlayer.currentTime = 0;
-}
+  //variables stack goes here
+  let sigils = document.querySelectorAll('.sigilContainer'),
+  lightbox = document.querySelector('.lightbox'),
+  closeLightBoxButton = lightbox.querySelector('.close-lightbox');
 
-  vidPlayer.addEventListener('mouseover', volOn);
-  vidPlayer.addEventListener('mouseout', volOff);
+  //functions in the middle!
+  function showHouseVideo() {
+    //debugger;
+    lightbox.classList.add('show-lightbox');
+    //make the video play
+  }
+  function closeLightBox() {
+    //debugger;
+    lightbox.classList.remove('show-lightbox');
+    //stop the video and rewind it to 0
+  }
 
-  playButton.addEventListener('click', playVideo);
-  pauseButton.addEventListener('click', pauseVideo);
-  rewindButton.addEventListener('click', rewindVideo);
+
+
+  //event handing at the bottom
+  sigils.forEach(sigil => sigil.addEventListener('click', showHouseVideo));
+  closeLightBoxButton.addEventListener('click', closeLightBox);
 
 })();
