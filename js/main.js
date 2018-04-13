@@ -12,11 +12,6 @@ let sigils = document.querySelectorAll('.sigilContainer'),
     vidControls = document.querySelector('.controls'),
     imageBanner = document.querySelector('#houseImages');
 
-    function scrollBanners(offset) {
-        let moveIt = offset * 600 + "px";
-          imageBanner.style.right = moveIt;
-    }
-
 
   //functions in the middle!
   function showHouseVideo() {
@@ -65,7 +60,7 @@ let sigils = document.querySelectorAll('.sigilContainer'),
 
 }
 
-  //event handing at the bottom
+  //event handling at the bottom
   sigils.forEach(sigil => sigil.addEventListener('click', showHouseVideo));
   closeLightBoxButton.addEventListener('click', closeLightBox);
   vidPlayer.addEventListener('ended', closeLightbox);

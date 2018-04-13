@@ -86,11 +86,12 @@ main {
 .targaryen { background-position:-253px -54px; }
 .targaryen:hover { background-position:-253px 0px; }
 
+.frey { background-position:-253px -54px; }
+.frey:hover { background-position:-253px 0px; }
+
 .tyrell { background-position:-253px -54px; }
 .tyrell:hover { background-position:-253px 0px; }
 
-.martell { background-position:-253px -54px; }
-.martell:hover { background-position:-253px 0px; }
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
