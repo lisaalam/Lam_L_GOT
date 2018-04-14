@@ -16,7 +16,7 @@ let sigils = document.querySelectorAll('.sigilContainer'),
   //functions in the middle!
   function showHouseVideo() {
     let houseName = this.className.split(' ')[1].capIt();
-    //split apart the class name on the element, grab the
+    //split apart the class name on the element
     document.querySelector('h1').textContent = `House ${houseName}`;
     //debugger;
     lightbox.classList.add('show-lightbox');
@@ -50,7 +50,6 @@ let sigils = document.querySelectorAll('.sigilContainer'),
     let theButton = this.firstElementChild;
 
     if (vidPlayer.paused == true) {
-      //play the
       vidPlayer.play();
       theButton.dataset.icon = "pause-circle";
     } else {
@@ -59,6 +58,7 @@ let sigils = document.querySelectorAll('.sigilContainer'),
   }
 
 }
+
 
   //event handling at the bottom
   sigils.forEach(sigil => sigil.addEventListener('click', showHouseVideo));
